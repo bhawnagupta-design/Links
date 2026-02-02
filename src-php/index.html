@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Services Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- USWDS CSS (WORKING CDN) -->
+  <link rel="stylesheet" href="uswds/dist/css/uswds.min.css"></head>
+  
+<!-- Example CSS for enhancements -->
+<style>
+  /* Card hover effect */
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Emoji / icon sizing */
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #005ea2;
+    color: #fff !important;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  .btn-primary:hover {
+    background-color: #004080;
+  }
+
+  /* Make cards responsive */
+  @media (max-width: 1024px) {
+    .grid-col-4 {
+      flex: 0 0 48%;
+      max-width: 48%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-col-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .usa-hero__callout h1 {
+      font-size: 2rem;
+    }
+    .usa-hero__callout p {
+      font-size: 1rem;
+    }
+
+    .usa-button--big {
+      width: 100%;
+      text-align: center;
+    }
+
+    .grid-row.flex-align-center {
+      flex-direction: column;
+      text-align: center;
+    }
+    .grid-col-4.text-right {
+      text-align: center;
+    }
+  }
+
+  /* Stats icons (optional if using images) */
+  .stats-icon {
+    width: 50px;
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<body class="usa-template">
+
+<!-- Skip link -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- Official Gov Banner -->
+<section class="usa-banner" aria-label="Official government website">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="usa-banner__text">
+          An official website of the United States government
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<!-- Header -->
+<header class="usa-header usa-header--basic bg-primary-dark">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text text-white">
+          <a href="/" class="text-white">City Portal</a>
+        </em>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main -->
+<main id="main-content">
+
+  <!-- HERO (Guideline-safe) -->
+  <section class="usa-hero bg-primary">
+    <div class="grid-container">
+      <div class="usa-hero__callout text-white">
+        <h1 class="usa-hero__heading">
+          Services That Work for Everyone
+        </h1>
+        <p class="usa-intro">
+          Access city services, programs, and information in one secure place.
+        </p>
+        <a class="usa-button usa-button--accent-warm usa-button--big" href="#">
+          Get started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="bg-base-lightest padding-y-4">
+    <div class="grid-container">
+      <div class="grid-row grid-gap text-center">
+        <div class="grid-col">
+          <h2 class="margin-0">150+</h2>
+          <p class="margin-0">City Services</p>
+        </div>
+        <div class="grid-col">
+          <h2 class="margin-0">24/7</h2>
+          <p class="margin-0">Online Access</p>
+        </div>
+        <div class="grid-col">
+          <h2 class="margin-0">100%</h2>
+          <p class="margin-0">Accessible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- POPULAR SERVICES -->
+<section class="usa-section" aria-labelledby="popular-services-heading">
+  <div class="grid-container">
+    <h2 id="popular-services-heading" class="margin-bottom-6 text-center">Popular Services</h2>
+
+    <div class="grid-row grid-gap">
+
+      <!-- Pay Bills Card -->
+      <div class="grid-col-4">
+        <div class="usa-card service-card" role="region" aria-labelledby="pay-bills-title">
+          <div class="usa-card__container">
+            <div class="service-icon" aria-hidden="true">💵</div>
+            <h3 id="pay-bills-title">Pay Bills</h3>
+            <p>Pay property taxes, utilities, parking tickets, and other city fees online quickly and securely.</p>
+            <a href="#" class="usa-link btn-primary" aria-label="Pay your bills online">Pay Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Apply for Permits Card -->
+      <div class="grid-col-4">
+        <div class="usa-card service-card" role="region" aria-labelledby="apply-permits-title">
+          <div class="usa-card__container">
+            <div class="service-icon" aria-hidden="true">📝</div>
+            <h3 id="apply-permits-title">Apply for Permits</h3>
+            <p>Submit applications for construction, parking, business, and event permits in a few clicks.</p>
+            <a href="#" class="usa-link btn-primary" aria-label="Apply for permits online">Apply Online</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Report an Issue Card -->
+      <div class="grid-col-4">
+        <div class="usa-card service-card" role="region" aria-labelledby="report-issue-title">
+          <div class="usa-card__container">
+            <div class="service-icon" aria-hidden="true">🚨</div>
+            <h3 id="report-issue-title">Report an Issue</h3>
+            <p>Quickly report potholes, streetlight outages, sanitation problems, and other city concerns.</p>
+            <a href="#" class="usa-link btn-primary" aria-label="Submit a report">Submit Report</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FEATURE STRIP -->
+  <section class="bg-accent-cool-light padding-y-6">
+    <div class="grid-container">
+      <div class="grid-row grid-gap flex-align-center">
+
+        <div class="grid-col-8">
+          <h2>Built for Accessibility and Trust</h2>
+          <p class="usa-intro">
+            Designed using the U.S. Web Design System to meet federal accessibility
+            and usability standards.
+          </p>
+        </div>
+
+        <div class="grid-col-4 text-right">
+          <a class="usa-button usa-button--primary" href="#">
+            Learn more
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="usa-section padding-y-6" aria-labelledby="bill-of-rights-heading">
+    <div class="grid-container">
+      <h2 class="text-center margin-bottom-4">Bill of Rights</h2>
+
+      <div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
+
+        <!-- First Amendment -->
+        <h4 class="usa-accordion__heading">
+          <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="m-a1">
+            First Amendment
+          </button>
+        </h4>
+        <div id="m-a1" class="usa-accordion__content usa-prose">
+          <p>
+            Congress shall make no law respecting an establishment of religion, or
+            prohibiting the free exercise thereof; or abridging the freedom of speech,
+            or of the press; or the right of the people peaceably to assemble, and to
+            petition the Government for a redress of grievances.
+          </p>
+        </div>
+
+        <!-- Second Amendment -->
+        <h4 class="usa-accordion__heading">
+          <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="m-a2">
+            Second Amendment
+          </button>
+        </h4>
+        <div id="m-a2" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            A well regulated Militia, being necessary to the security of a free State,
+            the right of the people to keep and bear Arms, shall not be infringed.
+          </p>
+          <ul>
+            <li>Right to bear arms</li>
+            <li>Well regulated militia</li>
+          </ul>
+        </div>
+
+        <!-- Third Amendment -->
+        <h4 class="usa-accordion__heading">
+          <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="m-a3">
+            Third Amendment
+          </button>
+        </h4>
+        <div id="m-a3" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            No Soldier shall, in time of peace be quartered in any house, without the
+            consent of the Owner, nor in time of war, but in a manner to be prescribed
+            by law.
+          </p>
+        </div>
+
+        <!-- Fourth Amendment -->
+        <h4 class="usa-accordion__heading">
+          <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="m-a4">
+            Fourth Amendment
+          </button>
+        </h4>
+        <div id="m-a4" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            The right of the people to be secure in their persons, houses, papers, and
+            effects, against unreasonable searches and seizures, shall not be
+            violated, and no Warrants shall issue, but upon probable cause.
+          </p>
+        </div>
+
+        <!-- Fifth Amendment -->
+        <h4 class="usa-accordion__heading">
+          <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="m-a5">
+            Fifth Amendment
+          </button>
+        </h4>
+        <div id="m-a5" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            No person shall be held to answer for a capital, or otherwise infamous
+            crime, unless on a presentment or indictment of a Grand Jury; nor shall
+            private property be taken for public use, without just compensation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Include USWDS JS -->
+  <script src="uswds/dist/js/uswds.min.js"></script>
+  <script>
+    window.Uswds.initAll();
+  </script>
+</main>
+
+<!-- Footer -->
+<footer class="usa-footer bg-base-dark text-white">
+  <div class="grid-container padding-y-4">
+    <p class="margin-0 text-center">
+      © 2026 City Services Portal · Built with USWDS
+    </p>
+  </div>
+</footer>
+
+<!-- USWDS JS (WORKING CDN) -->
+<script src="uswds/dist/js/uswds-init.min.js"></script>
+<script>
+  // Initialize USWDS components
+  window.Uswds.initAll();
+</script>
+
+</body>
+</html>
