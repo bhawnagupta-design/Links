@@ -5,102 +5,20 @@
   <title>City Services Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- USWDS CSS (WORKING CDN) -->
-  <link rel="stylesheet" href="uswds/dist/css/uswds.min.css"></head>
-  
-<!-- Example CSS for enhancements -->
-<style>
-  /* Card hover effect */
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  /* Emoji / icon sizing */
-  .service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Buttons */
-  .btn-primary {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #005ea2;
-    color: #fff !important;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
-  .btn-primary:hover {
-    background-color: #004080;
-  }
-
-  /* Make cards responsive */
-  @media (max-width: 1024px) {
-    .grid-col-4 {
-      flex: 0 0 48%;
-      max-width: 48%;
-      margin-bottom: 2rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .grid-col-4 {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-bottom: 2rem;
-    }
-
-    .usa-hero__callout h1 {
-      font-size: 2rem;
-    }
-    .usa-hero__callout p {
-      font-size: 1rem;
-    }
-
-    .usa-button--big {
-      width: 100%;
-      text-align: center;
-    }
-
-    .grid-row.flex-align-center {
-      flex-direction: column;
-      text-align: center;
-    }
-    .grid-col-4.text-right {
-      text-align: center;
-    }
-  }
-
-  /* Stats icons (optional if using images) */
-  .stats-icon {
-    width: 50px;
-    margin-bottom: 0.5rem;
-  }
-</style>
+  <!-- USWDS CSS -->
+  <link rel="stylesheet" href="uswds/dist/css/uswds.min.css">
+</head>
 
 <body class="usa-template">
 
-<!-- Skip link -->
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-<!-- Official Gov Banner -->
+<!-- Gov Banner -->
 <section class="usa-banner" aria-label="Official government website">
-  <div class="usa-accordion">
-    <header class="usa-banner__header">
-      <div class="usa-banner__inner">
-        <div class="usa-banner__text">
-          An official website of the United States government
-        </div>
-      </div>
-    </header>
+  <div class="usa-banner__inner">
+    <p class="usa-banner__text">
+      An official website of the United States government
+    </p>
   </div>
 </section>
 
@@ -109,7 +27,7 @@
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
-        <em class="usa-logo__text text-white">
+        <em class="usa-logo__text">
           <a href="/" class="text-white">City Portal</a>
         </em>
       </div>
@@ -117,85 +35,98 @@
   </div>
 </header>
 
-<!-- Main -->
 <main id="main-content">
 
-  <!-- HERO (Guideline-safe) -->
-  <section class="usa-hero bg-primary">
-    <div class="grid-container">
-      <div class="usa-hero__callout text-white">
-        <h1 class="usa-hero__heading">
-          Services That Work for Everyone
-        </h1>
-        <p class="usa-intro">
-          Access city services, programs, and information in one secure place.
-        </p>
-        <a class="usa-button usa-button--accent-warm usa-button--big" href="#">
-          Get started
-        </a>
-      </div>
+<!-- HERO -->
+<section class="usa-hero bg-primary">
+  <div class="grid-container">
+    <div class="usa-hero__callout text-white">
+      <h1 class="usa-hero__heading">
+        Services That Work for Everyone
+      </h1>
+      <p class="usa-intro">
+        Access city services, programs, and information in one secure place.
+      </p>
+      <a class="usa-button usa-button--accent-warm usa-button--big" href="#">
+        Get started
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- STATS STRIP -->
-  <section class="bg-base-lightest padding-y-4">
-    <div class="grid-container">
-      <div class="grid-row grid-gap text-center">
-        <div class="grid-col">
-          <h2 class="margin-0">150+</h2>
-          <p class="margin-0">City Services</p>
-        </div>
-        <div class="grid-col">
-          <h2 class="margin-0">24/7</h2>
-          <p class="margin-0">Online Access</p>
-        </div>
-        <div class="grid-col">
-          <h2 class="margin-0">100%</h2>
-          <p class="margin-0">Accessible</p>
-        </div>
+<!-- STATS -->
+<section class="bg-base-lightest padding-y-4">
+  <div class="grid-container">
+    <div class="grid-row grid-gap text-center">
+      <div class="grid-col">
+        <h2 class="margin-0">150+</h2>
+        <p class="margin-0">City Services</p>
+      </div>
+      <div class="grid-col">
+        <h2 class="margin-0">24/7</h2>
+        <p class="margin-0">Online Access</p>
+      </div>
+      <div class="grid-col">
+        <h2 class="margin-0">100%</h2>
+        <p class="margin-0">Accessible</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- POPULAR SERVICES -->
 <section class="usa-section" aria-labelledby="popular-services-heading">
   <div class="grid-container">
-    <h2 id="popular-services-heading" class="margin-bottom-6 text-center">Popular Services</h2>
+    <h2 id="popular-services-heading" class="text-center margin-bottom-6">
+      Popular Services
+    </h2>
 
     <div class="grid-row grid-gap">
 
-      <!-- Pay Bills Card -->
+      <!-- Pay Bills -->
       <div class="grid-col-4">
-        <div class="usa-card service-card" role="region" aria-labelledby="pay-bills-title">
-          <div class="usa-card__container">
-            <div class="service-icon" aria-hidden="true">💵</div>
-            <h3 id="pay-bills-title">Pay Bills</h3>
-            <p>Pay property taxes, utilities, parking tickets, and other city fees online quickly and securely.</p>
-            <a href="#" class="usa-link btn-primary" aria-label="Pay your bills online">Pay Now</a>
+        <div class="usa-card">
+          <div class="usa-card__container padding-3 text-center">
+            <p class="font-ui-xl">💵</p>
+            <h3 class="usa-card__heading">Pay Bills</h3>
+            <p>
+              Pay property taxes, utilities, parking tickets, and city fees.
+            </p>
+            <a href="#" class="usa-button usa-button--primary">
+              Pay now
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Apply for Permits Card -->
+      <!-- Apply for Permits -->
       <div class="grid-col-4">
-        <div class="usa-card service-card" role="region" aria-labelledby="apply-permits-title">
-          <div class="usa-card__container">
-            <div class="service-icon" aria-hidden="true">📝</div>
-            <h3 id="apply-permits-title">Apply for Permits</h3>
-            <p>Submit applications for construction, parking, business, and event permits in a few clicks.</p>
-            <a href="#" class="usa-link btn-primary" aria-label="Apply for permits online">Apply Online</a>
+        <div class="usa-card">
+          <div class="usa-card__container padding-3 text-center">
+            <p class="font-ui-xl">📝</p>
+            <h3 class="usa-card__heading">Apply for Permits</h3>
+            <p>
+              Construction, parking, business, and event permits.
+            </p>
+            <a href="#" class="usa-button usa-button--primary">
+              Apply online
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Report an Issue Card -->
+      <!-- Report an Issue -->
       <div class="grid-col-4">
-        <div class="usa-card service-card" role="region" aria-labelledby="report-issue-title">
-          <div class="usa-card__container">
-            <div class="service-icon" aria-hidden="true">🚨</div>
-            <h3 id="report-issue-title">Report an Issue</h3>
-            <p>Quickly report potholes, streetlight outages, sanitation problems, and other city concerns.</p>
-            <a href="#" class="usa-link btn-primary" aria-label="Submit a report">Submit Report</a>
+        <div class="usa-card">
+          <div class="usa-card__container padding-3 text-center">
+            <p class="font-ui-xl">🚨</p>
+            <h3 class="usa-card__heading">Report an Issue</h3>
+            <p>
+              Report potholes, streetlights, sanitation, and safety issues.
+            </p>
+            <a href="#" class="usa-button usa-button--primary">
+              Submit report
+            </a>
           </div>
         </div>
       </div>
@@ -205,31 +136,8 @@
 </section>
 
 
-  <!-- FEATURE STRIP -->
-  <section class="bg-accent-cool-light padding-y-6">
-    <div class="grid-container">
-      <div class="grid-row grid-gap flex-align-center">
 
-        <div class="grid-col-8">
-          <h2>Built for Accessibility and Trust</h2>
-          <p class="usa-intro">
-            Designed using the U.S. Web Design System to meet federal accessibility
-            and usability standards.
-          </p>
-        </div>
-
-        <div class="grid-col-4 text-right">
-          <a class="usa-button usa-button--primary" href="#">
-            Learn more
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="usa-section padding-y-6" aria-labelledby="bill-of-rights-heading">
+<section class="shadow-1 usa-section padding-y-6" aria-labelledby="bill-of-rights-heading">
     <div class="grid-container">
       <h2 class="text-center margin-bottom-4">Bill of Rights</h2>
 
@@ -313,26 +221,94 @@
     </div>
   </section>
 
-  <!-- Include USWDS JS -->
-  <script src="uswds/dist/js/uswds.min.js"></script>
-  <script>
-    window.Uswds.initAll();
-  </script>
+  <section class="bg-secondary-lighter padding-y-4" aria-labelledby="important-documents-heading">
+    <div class="grid-container">
+      <table class="usa-table">
+  <caption>
+    <h2 class="text-center margin-bottom-4">Table of Rights</h2>
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Document title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Declaration of Independence</th>
+      <td>
+        Statement adopted by the Continental Congress declaring independence
+        from the British Empire.
+      </td>
+      <td>1776</td>
+    </tr>
+    <tr>
+      <th scope="row">Bill of Rights</th>
+      <td>
+        The first ten amendments of the U.S. Constitution guaranteeing rights
+        and freedoms.
+      </td>
+      <td>1791</td>
+    </tr>
+    <tr>
+      <th scope="row">Declaration of Sentiments</th>
+      <td>
+        A document written during the Seneca Falls Convention outlining the
+        rights that American women should be entitled to as citizens.
+      </td>
+      <td>1848</td>
+    </tr>
+    <tr>
+      <th scope="row">Emancipation Proclamation</th>
+      <td>
+        An executive order granting freedom to slaves in designated southern
+        states.
+      </td>
+      <td>1863</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+
+<!-- FEATURE STRIP -->
+<section class="bg-accent-cool-light padding-y-6">
+  <div class="grid-container">
+    <div class="grid-row grid-gap flex-align-center">
+
+      <div class="grid-col-8">
+        <h2>Built for Accessibility and Trust</h2>
+        <p class="usa-intro">
+          Designed using the U.S. Web Design System to meet federal accessibility
+          and usability standards.
+        </p>
+      </div>
+
+      <div class="grid-col-4 text-right">
+        <a class="usa-button usa-button--secondary" href="#">
+          Learn more
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- Footer -->
 <footer class="usa-footer bg-base-dark text-white">
-  <div class="grid-container padding-y-4">
-    <p class="margin-0 text-center">
+  <div class="grid-container padding-y-4 text-center">
+    <p class="margin-0">
       © 2026 City Services Portal · Built with USWDS
     </p>
   </div>
 </footer>
 
-<!-- USWDS JS (WORKING CDN) -->
-<script src="uswds/dist/js/uswds-init.min.js"></script>
+<!-- USWDS JS -->
+<script src="uswds/dist/js/uswds.min.js"></script>
 <script>
-  // Initialize USWDS components
   window.Uswds.initAll();
 </script>
 
